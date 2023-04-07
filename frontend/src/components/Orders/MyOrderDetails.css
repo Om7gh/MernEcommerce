@@ -1,0 +1,127 @@
+.orderDetailsPage {
+  background-color: var(--color-242426);
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+}
+
+.orderDetailsContainer > h1 {
+  font-size: 3vmax;
+  font-weight: 400;
+  margin: 4vmax 0;
+  color: var(--color-fc744a) !important;
+}
+
+.orderDetailsContainer {
+  padding: 5vmax;
+  padding-bottom: 0%;
+}
+
+.orderDetailsContainer > p {
+  font-size: 1.8vmax;
+  font-weight: 400;
+}
+
+.orderDetailsContainerBox,
+.orderDetailsCartItemsContainer {
+  margin: 2vmax;
+}
+
+.orderDetailsContainerBox > div {
+  display: flex;
+  margin: 1vmax 0;
+}
+
+.orderDetailsContainerBox > div > p {
+  font-size: 1vmax;
+  font-weight: 400;
+  color: var(--color-fc744a);
+}
+.orderDetailsContainerBox > div > span {
+  margin: 0 1vmax;
+  font-size: 1vmax;
+  font-weight: 300;
+  color: var(--color-white);
+}
+
+.orderDetailsCartItems > p {
+  font-size: 1vmax;
+  font-weight: 400;
+}
+
+.orderDetailsCartItems {
+  padding: 2vmax 5vmax;
+  border-top: 1px solid var(--color-white);
+}
+
+.orderDetailsCartItemsContainer > div {
+  display: flex;
+  font: 400 1vmax "Roboto";
+  align-items: center;
+  margin: 2vmax 0;
+}
+
+.orderDetailsCartItemsContainer > div > img {
+  width: 5vmax;
+}
+
+.orderDetailsCartItemsContainer > div > a {
+  color: var(--color-white);
+  margin: 0 2vmax;
+  width: 60%;
+  text-decoration: none;
+}
+
+.orderDetailsCartItemsContainer > div > span {
+  font: 100 1vmax cursive;
+  color: var(--color-white);
+}
+
+@media screen and (max-width: 600px) {
+  .orderDetailsPage {
+    min-height: 100vh;
+    height: 120vh;
+  }
+  .orderDetailsContainer > p {
+    font-size: 4vw;
+    font-weight: 400;
+  }
+
+  .orderDetailsContainerBox > div {
+    margin: 4vw 0;
+  }
+
+  .orderDetailsContainerBox > div > p {
+    font-size: 4vw;
+    font-weight: 400;
+  }
+  .orderDetailsContainerBox > div > span {
+    font-size: 4vw;
+    font-weight: 400;
+  }
+
+  .orderDetailsCartItems > p {
+    font-size: 6vw !important;
+    font-weight: 400 !important;
+  }
+
+  .orderDetailsCartItemsContainer > div {
+    font-size: 4vw !important;
+    font-weight: 400 !important;
+    margin: 4vw 0 !important;
+  }
+
+  .orderDetailsCartItemsContainer > div > img {
+    width: 10vw !important;
+  }
+
+  .orderDetailsCartItemsContainer > div > a {
+    margin: 2vw !important;
+    width: 30% !important;
+  }
+
+  .orderDetailsCartItemsContainer > div > span {
+    font-size: 4vw !important;
+    font-weight: 400 !important;
+  }
+}

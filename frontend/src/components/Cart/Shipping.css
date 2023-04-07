@@ -1,0 +1,142 @@
+.shipping__Container {
+  width: 100vw;
+  max-width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shipping__Container .shipping-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.05;
+}
+.shipping__box {
+  margin-top: 5vmax;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.shipping__box h2 {
+  flex: 1;
+  font-size: 2vmax;
+  font-weight: 600;
+  color: var(--color-white);
+  text-align: left;
+}
+
+.shipping__box h2 span {
+  color: var(--color-ff3e04);
+}
+
+.shipping__box .shipping__form {
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0 2px 5px var(--color-black);
+}
+
+.shipping__box .shipping__form > div {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shipping__box > .shipping__form > div > input {
+  width: 80%;
+  border: 1px solid var(--color-black);
+  outline: none;
+  padding: 1vmax 1vmax 1vmax 4vmax;
+  font: 400 1vmax cursive;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.shipping__box > .shipping__form > div > select {
+  width: 80%;
+  border: 1px solid var(--color-black);
+  outline: none;
+  padding: 1vmax 1vmax 1vmax 4vmax;
+  font: 400 1vmax cursive;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.shipping__box > .shipping__form > div > svg {
+  transform: translateX(3vmax);
+  -webkit-transform: translateX(3vmax);
+  -moz-transform: translateX(3vmax);
+  -ms-transform: translateX(3vmax);
+  -o-transform: translateX(3vmax);
+}
+
+.shipping__form > .shippingBtn {
+  width: 10vmax;
+  padding: 1vmax 2vmax;
+  border: none;
+  outline: none;
+  font: 400 1.2vmax sans-serif;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .shipping__box {
+    flex-direction: column;
+    gap: 3vmax;
+  }
+  .shipping__box h2 {
+    font-size: 3vmax;
+    text-align: center;
+    margin: 2vmax 0;
+    padding-top: 2vmax;
+  }
+
+  .shipping__form {
+    width: 95vw;
+    backdrop-filter: blur(5px);
+  }
+
+  .shipping__box > .shipping__form > div > input {
+    font: 400 1.5vmax cursive !important;
+    padding: 1.5vmax 1.5vmax 1.5vmax 4vmax !important;
+  }
+  .shipping__box > .shipping__form > div > select {
+    font: 400 1.5vmax cursive !important;
+    padding: 1.5vmax 1.5vmax 1.5vmax 4vmax !important;
+  }
+
+  .shipping__form > .shippingBtn {
+    font-size: 1.5vmax;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .shipping__form > div > svg {
+    font-size: 2.5vmax;
+  }
+}

@@ -1,0 +1,76 @@
+.productList_container {
+  width: 100%;
+  background: var(--color-242426);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.productList_container > h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 0.5rem;
+  color: var(--admin-profile);
+  margin: 5rem 2rem 2rem;
+  text-align: center;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -o-transition: 0.5s all;
+}
+.productList_container > h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 0.5rem;
+  color: var(--admin-profile);
+  margin: 5rem 2rem 2rem;
+  text-align: center;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -o-transition: 0.5s all;
+}
+.productList_table {
+  background: white;
+  width: 100%;
+  border: none !important;
+}
+
+.productList_table > div {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-242426);
+  border: none !important;
+}
+
+.productList_table a {
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  cursor: pointer !important;
+  z-index: 1000 !important;
+}
+.productList_table a:hover {
+  color: var(--admin-profile) !important;
+}
+.productList_table button {
+  background: transparent !important;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  z-index: 1000 !important;
+}
+
+.productList_table button:hover {
+  background: var(--admin-color) !important;
+}
+.MuiSvgIcon-root {
+  z-index: 100 !important;
+}

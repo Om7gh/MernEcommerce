@@ -1,0 +1,142 @@
+.newProduct_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: var(--color-242426);
+  position: relative;
+}
+
+.createProduct_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 80%;
+  padding: 2vmax;
+  margin: auto;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  background: #cecece;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.5);
+}
+.createProduct_form > h2 {
+  color: var(--color-white);
+  text-shadow: 0 1px 5px var(--color-242426);
+}
+.newProduct_container .img-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  opacity: 0.1;
+}
+
+.createProduct_form > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.createProduct_form > div input,
+.createProduct_form > div select,
+.createProduct_form > div textarea {
+  z-index: 1000 !important;
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  border: 1px solid var(--color-fc744a);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font: 300 1vmax cursive;
+  outline: none;
+  box-shadow: 0 0 0 transparent;
+}
+
+.createProduct_form > div > svg {
+  z-index: 1001 !important;
+  position: absolute;
+  transform: translateX(1vmax);
+  -webkit-transform: translateX(1vmax);
+  -moz-transform: translateX(1vmax);
+  -ms-transform: translateX(1vmax);
+  -o-transform: translateX(1vmax);
+  color: var(--color-fc744a);
+  font-size: 1.6vmax;
+}
+#createProduct_form-img > img {
+  width: 3vmax;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+#chosenFile > input {
+  display: flex;
+  padding: 0;
+}
+
+#chosenFile > input::file-selector-button {
+  cursor: pointer;
+  width: 100%;
+  height: 5vh;
+  z-index: 2;
+  margin: 0;
+  border: none;
+  font: 400 0.8vmax cursive;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  padding: 0 1vmax;
+  color: var(--color-6e6b74);
+  background: var(--color-white);
+}
+#createProductBtn {
+  width: 100% !important;
+  background: var(--color-242426) !important;
+  height: 5vh !important;
+  color: var(--color-white) !important;
+  box-shadow: 0 1px 5px var(--color-242426);
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -o-transition: 0.5s all;
+}
+
+#createProductBtn:hover {
+  background: var(--color-6e6b74) !important;
+}
+
+@media screen and (max-width: 600px) {
+  .createProduct_form {
+    width: 95%;
+    margin: auto;
+  }
+
+  .createProduct_form > div > input,
+  .createProduct_form > div > select,
+  .createProduct_form > div > textArea {
+    font-size: 1rem;
+  }
+  .createProduct_form > div > svg {
+    font-size: 1.2rem;
+  }
+  #chosenFile > input::file-selector-button {
+    font: 400 1.2rem cursive;
+  }
+  #createProduct_form-img > img {
+    width: 5vmax;
+  }
+}

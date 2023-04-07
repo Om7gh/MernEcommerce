@@ -1,0 +1,64 @@
+.promo-heading {
+  text-align: center;
+  margin: 3vmax auto;
+  background: linear-gradient(
+    to left,
+    var(--color-fc744a),
+    var(--color-ff3e04)
+  );
+  width: fit-content;
+  color: transparent;
+  background-clip: text;
+  font-size: 2vmax;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  padding: 0.5vmax 1vmax;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-bottom: 2px solid var(--color-6e6b74);
+}
+
+.promotion {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80vw;
+  max-width: 100%;
+  margin: auto;
+  align-items: flex-start;
+  background-color: var(--color-fc744a);
+  border-radius: 5rem;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  -ms-border-radius: 5rem;
+  -o-border-radius: 5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0px 2px 50px var(--color-black);
+}
+
+.promotion > div {
+  flex: 1;
+}
+
+.product-img {
+  display: flex;
+}
+
+.product-img > img {
+  width: fit-content;
+}
+
+.promotion > div p:first-child {
+  color: green;
+}
+
+.promotion .promo-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center !important;
+  align-items: flex-start !important;
+}

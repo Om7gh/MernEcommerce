@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-242426: #18171d;
+  --color-6e6b74: #5f5f5f;
+  --color-ff3e04: #e7866d;
+  --color-fc744a: #f3d758;
+  --color-white: #ffffff;
+  --color-black: #111;
+  --admin-profile: #ee4540;
+  --admin-color: orange;
+}
+
+body {
+  background: var(--color-242426);
+  font-family: "Ubuntu", sans-serif;
+  overflow-x: hidden !important;
+  user-select: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.redColor {
+  color: red !important;
+  font-weight: 600 !important;
+}
+.greenColor {
+  color: green !important;
+  font-weight: 600 !important;
+}
+
+.orangeColor {
+  color: orange !important;
+  font-weight: 600 !important;
+}

@@ -1,0 +1,82 @@
+.myOrderPage {
+  margin: 8vmax auto 1vmax auto;
+  background: var(--color-242426);
+  width: 95vw;
+  max-width: 100%;
+  padding: 1vmax 7vmax;
+  color: var(--color-242426);
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1vmax;
+}
+
+.myOrdersName {
+  text-align: center !important;
+  font-size: 2vmax !important;
+  font-weight: bold !important;
+  background: linear-gradient(
+    to right,
+    var(--color-ff3e04),
+    var(--color-white)
+  );
+  color: transparent !important;
+  background-clip: text;
+  text-transform: capitalize;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif !important;
+}
+.grid_table {
+  background: linear-gradient(to left, var(--color-white), var(--color-white));
+}
+.grid_table div {
+  font-size: 1.2vmax;
+  border: none !important;
+  font-weight: 300;
+}
+
+.MuiDataGrid-columnHeader {
+  background: var(--color-fc744a) !important;
+  color: var(--color-242426) !important;
+  padding: 1vmax !important;
+}
+.MuiDataGrid-columnHeader > div {
+  font-weight: bold !important;
+}
+.MuiSvgIcon-fontSizeSmall {
+  height: 20px !important;
+  width: 20px !important;
+  background: transparent;
+}
+
+.MuiButtonBase-root {
+  background: var(--color-white) !important;
+  height: 20px !important;
+  width: 20px !important;
+}
+
+.MuiPaper-root {
+  background: var(--color-242426) !important;
+}
+
+.MuiButtonBase-root {
+  background: var(--color-242426) !important;
+  height: 25px !important;
+  width: 25px !important;
+}
+
+.MuiFormControl-root label {
+  color: var(--color-white) !important;
+}
+
+@media screen and (max-width: 500px) {
+  .grid_table div {
+    font-size: 1.8vmax;
+    border: none !important;
+    font-weight: 400;
+  }
+  .myOrderPage {
+    width: 100vw !important;
+  }
+  .myOrdersName {
+    font-size: 2vmax;
+  }
+}

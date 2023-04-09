@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-
+const cool = require("cool-ascii-faces");
 const cookieParser = require("cookie-parser");
 const errorMiddleware = require("./middleware/error");
 const fileUpload = require("express-fileupload");
@@ -15,7 +15,7 @@ app.use(express.json({ limit: "50mb" }));
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 app.use(fileUpload());
-
+app.get("/cool", (req, res) => res.send(cool()));
 // Route
 
 const product = require("./routes/productRoute");

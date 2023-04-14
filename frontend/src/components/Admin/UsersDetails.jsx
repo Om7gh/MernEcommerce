@@ -35,9 +35,9 @@ const UserDetails = () => {
     if (user && user._id !== id) {
       dispatch(getSingleUser(id));
     } else {
-      setName(user.name);
-      setEmail(user.email);
-      setRole(user.role);
+      setName(user?.name);
+      setEmail(user?.email);
+      setRole(user?.role);
     }
     if (error) {
       alert.error(error);

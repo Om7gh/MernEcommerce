@@ -1,11 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useMemo, useState } from "react";
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   Footer,
   Header,
@@ -57,7 +52,8 @@ const App = () => {
     const { data } = await axios.get("/api/v1/stripe-Api-key");
     setStripApiKey(data.stripeApiKey);
   };
-  useEffect(() => {
+
+  useMemo(() => {
     if (isAuthenticated) {
       alert.success("you are logged in");
     }

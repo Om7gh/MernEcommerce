@@ -17,6 +17,8 @@ const Home = ({ title }) => {
   const alert = useAlert();
 
   const { loading, error, products } = useSelector((state) => state.products);
+
+  console.log(products);
   useEffect(() => {
     if (error) {
       alert.error(error);
@@ -24,7 +26,7 @@ const Home = ({ title }) => {
     }
     dispatch(getProduct());
   }, [dispatch, error, alert]);
-  console.log(products);
+
   return (
     <Fragment>
       {loading ? (
@@ -109,10 +111,9 @@ const Home = ({ title }) => {
           </Marquee>
           <h2 className="home__heading">Featured Product.</h2>
           <div id="container" className="home__container">
-            {products &&
-              products?.map((product) => (
-                <ProductCard key={product?._id} product={product} />
-              ))}
+            {products?.map((product) => (
+              <ProductCard key={product?._id} product={product} />
+            ))}
           </div>{" "}
         </Fragment>
       )}

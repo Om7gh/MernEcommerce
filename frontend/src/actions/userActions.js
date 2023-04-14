@@ -32,11 +32,9 @@ import {
   UPDATE_USER_REQUEST,
   UPDATE_USER_SUCCESS,
   UPDATE_USER_FAIL,
-  UPDATE_USER_RESET,
   DELETE_USER_REQUEST,
   DELETE_USER_FAIL,
   DELETE_USER_SUCCESS,
-  DELETE_USER_RESET,
 } from "../constants/userConstants";
 import axios from "axios";
 
@@ -194,7 +192,7 @@ export const getSingleUser = (id) => async (dispatch) => {
 // GET SINGLE USERS
 export const updateUser = (id, userData) => async (dispatch) => {
   try {
-    dispatch({ type: USER_DETAILS_REQUEST });
+    dispatch({ type: UPDATE_USER_REQUEST });
     const config = { headers: { "Content-Type": "application/json" } };
 
     const { data } = await axios.put(
@@ -203,9 +201,9 @@ export const updateUser = (id, userData) => async (dispatch) => {
       config
     );
 
-    dispatch({ type: USER_DETAILS_SUCCESS, payload: data.success });
+    dispatch({ type: UPDATE_USER_SUCCESS, payload: data.success });
   } catch (error) {
-    dispatch({ type: USER_DETAILS_FAIL, payload: error.response.data.message });
+    dispatch({ type: UPDATE_USER_FAIL, payload: error.response.data.message });
   }
 };
 

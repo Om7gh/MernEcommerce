@@ -29,7 +29,6 @@ import {
   DELETE_REVIEWS_FAIL,
   DELETE_REVIEWS_RESET,
 } from "../constants/productConstant";
-import { UPDATE_PASSWORD_RESET } from "../constants/userConstants";
 
 export const productsReducer = (state = { products: [] }, action) => {
   switch (action.type) {

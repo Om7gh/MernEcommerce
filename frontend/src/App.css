@@ -275,7 +275,7 @@
 .home__right {
   flex: 1;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   position: relative;
 }
 

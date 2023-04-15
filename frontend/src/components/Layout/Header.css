@@ -39,6 +39,7 @@
   .speedIcon {
     width: 80%;
     height: 80%;
+    z-index: 5000000 !important;
   }
 }
 @media screen and (min-width: 1000px) {

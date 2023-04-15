@@ -13,7 +13,7 @@
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
-  z-index: 105000;
+  z-index: 1000 !important;
 }
 
 .nav .nav__logo h1 {

@@ -2,14 +2,14 @@
   position: fixed;
   right: 4vmax;
   top: 1.5vmax;
-  z-index: 5555558888888888888885555 !important;
+  z-index: 5555 !important;
 }
 
 .MuiButtonBase-root {
   width: 4vmax !important;
   height: 4vmax !important;
   background: white !important;
-  z-index: 5000000 !important;
+  z-index: 55555 !important;
 }
 
 .speedIcon {
@@ -20,13 +20,13 @@
   -moz-border-radius: 100% !important;
   -ms-border-radius: 100% !important;
   -o-border-radius: 100% !important;
-  z-index: 5000000 !important;
+  z-index: 5555 !important;
 }
 .speedDial > :first-child {
   width: 3vmax !important;
   height: 3vmax !important;
   background: var(--color-242426) !important;
-  z-index: 5000000 !important;
+  z-index: 5555 !important;
 }
 
 @media screen and (max-width: 700px) {
@@ -42,7 +42,6 @@
   .speedIcon {
     width: 80%;
     height: 80%;
-    z-index: 5000000 !important;
   }
 }
 @media screen and (min-width: 1000px) {

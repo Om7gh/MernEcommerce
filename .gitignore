@@ -6,12 +6,11 @@
 
 /frontend//.pnp
 /frontend/.pnp.js
-/frontend/./keys.js
+
 # testing
 /frontend//coverage
 
-# production
-/frontend//build
+
 
 # misc
 /backend/config/config.env

@@ -7,13 +7,9 @@
   align-items: center;
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  z-index: 1000 !important;
+  left: 0;
+  z-index: 550 !important;
+  height: 10vh;
 }
 
 .nav .nav__logo h1 {
@@ -46,6 +42,10 @@
 .nav .nav__icons {
   display: flex;
   gap: 1.5rem;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000 !important;
 }
 
 .nav .nav__icons .nav__icons-icon {
@@ -84,6 +84,42 @@
 .active {
   color: var(--color-white) !important;
   padding: 0.3rem 0.8rem !important;
+}
+
+.speedDial {
+  width: 8vmin;
+  height: 5vmin;
+  position: relative;
+  z-index: 5555 !important;
+  border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -ms-border-radius: 50% !important;
+  -o-border-radius: 50% !important;
+}
+
+.speedIcon {
+  border-radius: 100% !important;
+  -webkit-border-radius: 100% !important;
+  -moz-border-radius: 100% !important;
+  -ms-border-radius: 100% !important;
+  -o-border-radius: 100% !important;
+  width: 100%;
+  height: 100%;
+  cursor: pointer !important;
+  border: 2px solid white;
+}
+
+.speedDial2 {
+  cursor: pointer !important;
+  width: 5vmin;
+  height: 5vmin;
+  z-index: 5555 !important;
+  border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -ms-border-radius: 50% !important;
+  -o-border-radius: 50% !important;
 }
 
 @media screen and (max-width: 554px) {

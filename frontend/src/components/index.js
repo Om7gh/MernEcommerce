@@ -8,7 +8,6 @@ export { default as Products } from "./Product/Products";
 export { default as ProductCard } from "./Home/ProductCard";
 export { default as Search } from "./Product/Search";
 export { default as LoginSignUp } from "./User/LoginSignUp";
-export { default as UserOption } from "./Layout/UserOption";
 export { default as Profile } from "./User/Profile";
 export { default as UpdateProfile } from "./User/UpdateProfile";
 export { default as UpdatePassword } from "./User/UpdatePassword";

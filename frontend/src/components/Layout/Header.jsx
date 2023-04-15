@@ -1,15 +1,30 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { BiUserCircle, BiSearchAlt } from "react-icons/bi";
 import { BsCartFill } from "react-icons/bs";
 import { CgMenuRound } from "react-icons/cg";
-import { useSelector } from "react-redux";
-import { UserOption } from "../";
-
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../actions/userActions";
+import ProfileImg from "../../asset/Profile.png";
+import {
+  Dashboard,
+  ExitToApp,
+  ListAlt,
+  Person,
+  ShoppingCart,
+} from "@mui/icons-material";
+import { Backdrop, SpeedDial, SpeedDialAction } from "@mui/material";
+import { useAlert } from "react-alert";
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [pageOffset, setPageOffset] = useState(0);
-  const { isAuthenticated } = useSelector((state) => state.user);
+  const { isAuthenticated, user } = useSelector((state) => state.user);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleScroll = () => {
     setPageOffset(window.pageYOffset);
@@ -32,12 +47,52 @@ const Header = () => {
       href: "/contact",
     },
   ];
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const [open, setOpen] = useState(false);
+  const history = useNavigate();
+  const alert = useAlert();
+  const { cartItems } = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+  const options = [
+    { icon: <ListAlt />, name: "Orders", func: orders },
+    { icon: <Person />, name: "Profile", func: account },
+    {
+      icon: (
+        <ShoppingCart
+          style={{
+            color: cartItems.length > 0 ? "var(--color-ff3e04)" : "unset",
+          }}
+        />
+      ),
+      name: `cart(${cartItems.length})`,
+      func: cart,
+    },
+    { icon: <ExitToApp />, name: "logout", func: logoutUser },
+  ];
+
+  if (user?.role === "admin") {
+    options.unshift({
+      icon: <Dashboard />,
+      name: "Dashboard",
+      func: dashboard,
+    });
+  }
+  function orders() {
+    history("/order/me");
+  }
+  function account() {
+    history("/Profile");
+  }
+  function logoutUser() {
+    dispatch(logout());
+    alert.success("LogOut Successfully");
+    setTimeout(() => history("/account"), 2000);
+  }
+  function dashboard() {
+    history("/admin/dashboard");
+  }
+  function cart() {
+    history("/cart");
+  }
 
   return (
     <Fragment>
@@ -72,10 +127,44 @@ const Header = () => {
           <Link className="nav__icons-icon" to={"/cart"}>
             <BsCartFill />
           </Link>
-          {!isAuthenticated && (
+          {!isAuthenticated ? (
             <Link className="nav__icons-icon" to={"/account"}>
               <BiUserCircle />
             </Link>
+          ) : (
+            <Fragment>
+              <Backdrop open={open} style={{ zIndex: "100" }} />
+              <SpeedDial
+                style={{
+                  zIndex: "5555555555555555555555555555",
+                  cursor: "pointer",
+                }}
+                ariaLabel="SpeedDial tooltip example"
+                onClose={() => setOpen(false)}
+                onOpen={() => setOpen(true)}
+                open={open}
+                icon={
+                  <img
+                    className="speedIcon"
+                    src={user.avatar.url ? user.avatar.url : { ProfileImg }}
+                    alt={user.name}
+                  />
+                }
+                direction="down"
+                className="speedDial"
+              >
+                {options.map((option, i) => (
+                  <SpeedDialAction
+                    key={option.name}
+                    icon={option.icon}
+                    tooltipTitle={option.name}
+                    onClick={option.func}
+                    tooltipOpen={window.innerWidth <= 600 ? true : false}
+                    className="speedDial2"
+                  />
+                ))}
+              </SpeedDial>
+            </Fragment>
           )}
 
           <CgMenuRound

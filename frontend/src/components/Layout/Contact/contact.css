@@ -2,10 +2,34 @@
   height: 100vh;
   width: 100vw;
   max-width: 100%;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: var(--color-242426);
   position: fixed;
+}
+.contactContainer > h2 {
+  background: var(--color-white);
+  padding: 0.5rem;
+  width: 30vmax;
+  margin: 2rem;
+  text-align: center;
+  color: var(--color-242426);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.img-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.05;
 }
 
 .mailBtn {
@@ -17,13 +41,43 @@
 .mailBtn > button {
   text-decoration: none;
   color: var(--admin-color) !important;
-  font: 200 2vmax "Roboto";
+  font: 200 2vmax cursive;
   cursor: url("https://img.icons8.com/color/48/000000/edit--v2.png"), pointer;
   padding: 2vmax;
+}
+.arrow-up {
+  margin: 3rem 0;
+  font-size: 3rem !important;
+  color: var(--color-white) !important;
+  animation: move 3s infinite;
+  -webkit-animation: move 3s infinite;
 }
 
 @keyframes mailBtnAnimation {
   to {
     transform: translateX(0);
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
   }
 }

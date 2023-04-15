@@ -8,10 +8,9 @@ const ProductCard = ({ product }) => {
   const options = {
     readyOnly: true,
     value: ratings,
-    precision: "0.5",
+    precision: 0.5,
   };
 
-  console.log(ratings);
   return (
     <Link className="home__product" to={`/product/${_id}`}>
       <div className="home__product-container">

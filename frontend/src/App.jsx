@@ -46,7 +46,7 @@ import ProtectedRoute from "./components/Route/ProtectRoute";
 
 const App = () => {
   const alert = useAlert();
-  const { isAuthenticated, user } = useSelector((state) => state.user);
+  const { isAuthenticated } = useSelector((state) => state.user);
   const [stripeApiKey, setStripApiKey] = useState("");
   const getApiKey = async () => {
     const { data } = await axios.get("/api/v1/stripe-Api-key");
@@ -59,13 +59,11 @@ const App = () => {
     }
     store.dispatch(loadUser());
     getApiKey();
-    console.log(stripeApiKey);
   }, [stripeApiKey]);
 
   return (
     <Router>
       <Elements stripe={loadStripe(stripeApiKey)}>
-        {isAuthenticated && <UserOption user={user} />}
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />

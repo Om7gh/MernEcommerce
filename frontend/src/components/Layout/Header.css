@@ -9,6 +9,7 @@
   width: 4vmax !important;
   height: 4vmax !important;
   background: white !important;
+  z-index: 5000000 !important;
 }
 
 .speedIcon {
@@ -19,11 +20,13 @@
   -moz-border-radius: 100% !important;
   -ms-border-radius: 100% !important;
   -o-border-radius: 100% !important;
+  z-index: 5000000 !important;
 }
 .speedDial > :first-child {
   width: 3vmax !important;
   height: 3vmax !important;
   background: var(--color-242426) !important;
+  z-index: 5000000 !important;
 }
 
 @media screen and (max-width: 700px) {

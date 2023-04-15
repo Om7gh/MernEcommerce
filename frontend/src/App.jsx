@@ -65,8 +65,8 @@ const App = () => {
   return (
     <Router>
       <Elements stripe={loadStripe(stripeApiKey)}>
-        <Header />
         {isAuthenticated && <UserOption user={user} />}
+        <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductDetails />} />
